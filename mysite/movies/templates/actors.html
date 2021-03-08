@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<p><h1>Aktorzy<h1></h1></p>
+    {% for a in actors %}
+        <p>{{ a.name }} {{ a.last_name }}, {{ a.age}} l.</p>
+    {% endfor %}
+{% endblock %}

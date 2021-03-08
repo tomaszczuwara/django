@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+ <ul>
+{% block content %}
+    <li><a href="{% url 'actor' %}">TUTAJ SĄ AKTORZY</a></li>
+     <li><a href="{% url 'country' %}">TUTAJ SĄ KRAJE</a></li>
+    <li><a href="{% url 'movie' %}">TUTAJ SĄ FILMY</a></li>
+    <li><a href="{% url 'oscar' %}">TUTAJ SĄ OSKARY</a></li>
+{% endblock %}
+</ul>

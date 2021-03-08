@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for c in countries %}
+        <p>{{ c.name }} {{ c.iso_code }}</p>
+    {% endfor %}
+{% endblock %}

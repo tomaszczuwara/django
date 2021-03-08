@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <p>QUESTION VIEW / TEMPLATE VIEW / FUNCTION</p>
+    {% for q in object_list %}
+    <p><li><a href="{% url "polls:my-question-detail-view" pk=q.pk %}"> {{ q.question_text }}</a></li>
+    {% endfor %}
+    <p>LIST VIEW</p>
+    {% for q in object_list %}
+        <li>{{ q.question_text }}</li>
+    {% endfor %}
+DETAIL VIEW
+    <p>{{ question.question_text }}</p>
+{% endblock %}

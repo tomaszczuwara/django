@@ -1,0 +1,33 @@
+
+{# <!--{% extends "base.html" %}--> #}
+{# <!--{% block content %}--> #}
+{# <!--    <ul>--> #}
+{# <!--        {% for q in questions %}--> #}
+{# <!--        <li>{{ q.question_text}}</li>--> #}
+{# <!--        {% endfor %}--> #}
+{# <!--    </ul>--> #}
+{# <!--{% endblock %}--> #}
+
+{% extends "base.html" %}
+{% block content %}
+    <ol>
+    {% for q in questions %}
+        <li>{{ q.question_text }}</li>
+        Choices:
+        <ul>
+        {% for c in q.choices.all %}
+            {% if c.votes > 3 %}
+                <li>{{ c.choice_text }}, votes: {{ c.votes }}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+        Answers:
+         <ul>
+        {% for a in q.answers.all %}
+            <li>{{ a.answer_text }}</li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+    </ol>
+<a href="{% url 'big-questions' %}">TUTAJ JEST LINK</a>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<li><a href="{% url 'polls:big-questions' %}">TUTAJ SĄ QUESTIONS</a></li>
+<li><a href="{% url 'polls:my-answers' %}">TUTAJ SĄ ANSWERS</a></li>
+<li><a href="{% url 'polls:choices' %}">TUTAJ SĄ CHOICES</a></li>
+A to zima zła:
+<br>
+<img src="{% static "zima.jpg" %}">
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% for animal in animals %}
+        <ul>
+        <li>This is a {{ animal }}</li>
+        </ul>
+    {% endfor %}
+{% endblock %}
+

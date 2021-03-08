@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for a in object_list %}
+        <p><li><a href="{% url "polls:my-answer-detail-view" pk=a.pk %}"> {{ a.answer_text }} {{ a.date_added }}</a></li>
+     {% endfor %}
+{% endblock %}
+
